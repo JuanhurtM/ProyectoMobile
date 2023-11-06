@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { Router, RouterModule } from '@angular/router';
+import { MenuPage } from '../menu/menu.page';
 
 
 @NgModule({
@@ -12,7 +14,11 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    RouterModule.forRoot([
+      { path: 'home', component: HomePage },
+      { path: 'menu', component: MenuPage },
+    ])
   ],
   declarations: [HomePage]
 })
